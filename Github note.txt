@@ -1,0 +1,43 @@
+$ git init         //Inittialize Local Git Repository
+$ git config --global user.name 'XtraS001'
+$ git config --global user.email 'xushengchin@gmail.com'
+
+$ touch <file>    //Create file
+$ touch htmlfile.html
+$ touch .gitignore
+$ touch dir1/dir1.cpp
+
+$ git add <file>   //Add Files(s) To Index
+$ git add htmlfile.html
+$ git add cppfile.cpp
+$ git add *.cpp    //Add all cpp files
+$ git add dir1(folder name)
+$ git add .        //Add all files
+
+$ git rm --cached <file> //Remove file
+$ git rm --cached *.cpp  //Remove all cpp file
+
+$ git status       //Check Status of Working Tree
+
+$ git commit               //Commit CHanges In Index
+$ git commit -m 'changed'  //Commit all changed file
+
+$ git ls-tree --name-only HEAD -r //Check commited file
+
+$ mkdir <folder name>   //Create folder
+
+$ git branch <branch name>    //Create branch
+$ git checkout <branch name>  //Checkout and log in to branch name
+$ git merge <branch name>     //Merge a branch
+
+#Follow steps when creating resipotary
+$ git remote add origin https://github.com/XtraS001/GitHub-Note.git
+$ git push -u origin master
+
+
+$ git push         //Push to Remote Repository
+$ git pull         //Pull Latest From Remote Repository
+
+$ git clone                //Clone Repository Into A New Directory
+$ git clone "link"         //Clone from link in github
+$ git clone "link" <folder name>  //Clone to a directory
