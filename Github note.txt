@@ -1,4 +1,4 @@
-$ git init         //Inittialize Local Git Repository
+$ git init         //Initialize Local Git Repository
 $ git config --global user.name 'XtraS001'
 $ git config --global user.email 'xushengchin@gmail.com'
 
