@@ -1,0 +1,238 @@
+﻿userx@userx:~$ cd /var/www/html
+userx@userx:/var/www/html$ sudo systemctl start apache2
+[sudo] password for userx: 
+userx@userx:/var/www/html$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:39:91:a1 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 82442sec preferred_lft 82442sec
+    inet6 fe80::a3b6:db3a:ac98:b1cb/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+userx@userx:/var/www/html$ ls
+index.html
+userx@userx:/var/www/html$ sudo rm -f index.html
+userx@userx:/var/www/html$ sudo nano index.html
+userx@userx:/var/www/html$ ls
+index.html
+userx@userx:/var/www/html$ sudo systemctl restart apache2
+userx@userx:/var/www/html$ sudo nano index.html
+userx@userx:/var/www/html$ cat index.html
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h1>My first PHP page</h1>
+
+<?php
+echo "Hello World!";
+?>
+
+</body>
+</html> 
+userx@userx:/var/www/html$ sudo nano index.html
+userx@userx:/var/www/html$ sudo nano index.html
+userx@userx:/var/www/html$ mv index.html index.php
+mv: cannot move 'index.html' to 'index.php': Permission denied
+userx@userx:/var/www/html$ sudo mv index.html index php
+mv: target 'php' is not a directory
+userx@userx:/var/www/html$ sudo mv index.html index php
+mv: target 'php' is not a directory
+userx@userx:/var/www/html$ sudo mv index.html index.php
+userx@userx:/var/www/html$ ls
+index.php
+userx@userx:/var/www/html$ sudo systemctl restart apache2
+userx@userx:/var/www/html$ sudo nano index.php
+userx@userx:/var/www/html$ sudo nano index.php
+userx@userx:/var/www/html$ php --version
+
+Command 'php' not found, but can be installed with:
+
+sudo apt install php7.4-cli
+
+userx@userx:/var/www/html$ sudo apt install php7.4-cli
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  php-common php7.4-common php7.4-json php7.4-opcache php7.4-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline
+0 upgraded, 6 newly installed, 0 to remove and 205 not upgraded.
+Need to get 2,643 kB of archives.
+After this operation, 13.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://my.archive.ubuntu.com/ubuntu focal/main amd64 php-common all 2:75 [11.9 kB]
+Get:2 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-common amd64 7.4.3-4ubuntu2.4 [979 kB]
+Get:3 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-json amd64 7.4.3-4ubuntu2.4 [19.2 kB]
+Get:4 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-opcache amd64 7.4.3-4ubuntu2.4 [198 kB]
+Get:5 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-readline amd64 7.4.3-4ubuntu2.4 [12.6 kB]
+Get:6 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-cli amd64 7.4.3-4ubuntu2.4 [1,422 kB]
+Fetched 2,643 kB in 23s (113 kB/s)                                                                          
+Selecting previously unselected package php-common.
+(Reading database ... 180524 files and directories currently installed.)
+Preparing to unpack .../0-php-common_2%3a75_all.deb ...
+Unpacking php-common (2:75) ...
+Selecting previously unselected package php7.4-common.
+Preparing to unpack .../1-php7.4-common_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-common (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-json.
+Preparing to unpack .../2-php7.4-json_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-json (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-opcache.
+Preparing to unpack .../3-php7.4-opcache_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-opcache (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-readline.
+Preparing to unpack .../4-php7.4-readline_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-readline (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php7.4-cli.
+Preparing to unpack .../5-php7.4-cli_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking php7.4-cli (7.4.3-4ubuntu2.4) ...
+Setting up php-common (2:75) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessio
+nclean.timer.
+Setting up php7.4-common (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/tokenizer.ini with new version
+Setting up php7.4-readline (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/readline.ini with new version
+Setting up php7.4-opcache (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/opcache.ini with new version
+Setting up php7.4-json (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/mods-available/json.ini with new version
+Setting up php7.4-cli (7.4.3-4ubuntu2.4) ...
+update-alternatives: using /usr/bin/php7.4 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.4 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.4 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/7.4/cli/php.ini with new version
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for php7.4-cli (7.4.3-4ubuntu2.4) ...
+userx@userx:/var/www/html$ php --version
+PHP 7.4.3 (cli) (built: Oct  6 2020 15:47:56) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+userx@userx:/var/www/html$ sudo systemctl restart apache2
+userx@userx:/var/www/html$ sudo nano index.php
+userx@userx:/var/www/html$ cd index.php
+bash: cd: index.php: Not a directory
+userx@userx:/var/www/html$ sudo /etc/init.d/apache2 restart
+Restarting apache2 (via systemctl): apache2.service.
+userx@userx:/var/www/html$ cd /var/www
+userx@userx:/var/www$ ls
+html
+userx@userx:/var/www$ sudo nano test.php
+userx@userx:/var/www$ sudo nano test.php
+userx@userx:/var/www$ ls
+html  test.php
+userx@userx:/var/www$ sudo  <!DOCTYPE html>
+bash: !DOCTYPE: event not found
+userx@userx:/var/www$ <html>
+bash: syntax error near unexpected token `newline'
+userx@userx:/var/www$ <body>
+bash: syntax error near unexpected token `newline'
+userx@userx:/var/www$ 
+userx@userx:/var/www$ <h1>My first PHP page</h1>
+bash: syntax error near unexpected token `newline'
+userx@userx:/var/www$ 
+userx@userx:/var/www$ <?php
+bash: ?php: No such file or directory
+userx@userx:/var/www$ echo "Hello World!";
+Hello World!
+userx@userx:/var/www$ ?>
+bash: syntax error near unexpected token `newline'
+userx@userx:/var/www$ 
+userx@userx:/var/www$ </body>
+bash: syntax error near unexpected token `newline'
+userx@userx:/var/www$ </html> 
+bash: syntax error near unexpected token `newline'
+userx@userx:/var/www$ sudo apt install php libapache2-mod-php
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libapache2-mod-php7.4 php7.4
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php libapache2-mod-php7.4 php php7.4
+0 upgraded, 4 newly installed, 0 to remove and 205 not upgraded.
+Need to get 1,379 kB of archives.
+After this operation, 4,768 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 libapache2-mod-php7.4 amd64 7.4.3-4ubuntu2.4 [1,364 kB]
+Get:2 http://my.archive.ubuntu.com/ubuntu focal/main amd64 libapache2-mod-php all 2:7.4+75 [2,836 B]        
+Get:3 http://my.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4 all 7.4.3-4ubuntu2.4 [9,248 B]    
+Get:4 http://my.archive.ubuntu.com/ubuntu focal/main amd64 php all 2:7.4+75 [2,712 B]                       
+Fetched 1,379 kB in 11s (129 kB/s)                                                                          
+Selecting previously unselected package libapache2-mod-php7.4.
+(Reading database ... 180643 files and directories currently installed.)
+Preparing to unpack .../libapache2-mod-php7.4_7.4.3-4ubuntu2.4_amd64.deb ...
+Unpacking libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package libapache2-mod-php.
+Preparing to unpack .../libapache2-mod-php_2%3a7.4+75_all.deb ...
+Unpacking libapache2-mod-php (2:7.4+75) ...
+Selecting previously unselected package php7.4.
+Preparing to unpack .../php7.4_7.4.3-4ubuntu2.4_all.deb ...
+Unpacking php7.4 (7.4.3-4ubuntu2.4) ...
+Selecting previously unselected package php.
+Preparing to unpack .../php_2%3a7.4+75_all.deb ...
+Unpacking php (2:7.4+75) ...
+Setting up libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+
+Creating config file /etc/php/7.4/apache2/php.ini with new version
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php7.4
+Setting up php7.4 (7.4.3-4ubuntu2.4) ...
+Setting up libapache2-mod-php (2:7.4+75) ...
+Setting up php (2:7.4+75) ...
+Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.4) ...
+userx@userx:/var/www$ sudo systemctl restart apache2
+userx@userx:/var/www$ sudo a2enmod php 
+ERROR: Module php does not exist!
+userx@userx:/var/www$ ^C
