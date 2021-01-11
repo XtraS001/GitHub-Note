@@ -1,6 +1,6 @@
 
 
-1) if life <0, then game over. 
+1) if life <0, then game over.
 2) how to play is not correct, need to change to rules of the game
 3) in play mode, life number is not correct, when life becomes zero, it returns to two
 4) coin not sure about its function
@@ -51,26 +51,4 @@ Collaborating
 git pull origin [branch name]
 git push origin [branch name]
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ Hello I am BBBBB
