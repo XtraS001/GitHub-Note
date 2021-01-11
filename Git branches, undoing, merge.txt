@@ -1,0 +1,76 @@
+
+
+1) if life <0, then game over. 
+2) how to play is not correct, need to change to rules of the game
+3) in play mode, life number is not correct, when life becomes zero, it returns to two
+4) coin not sure about its function
+5) if miss, dont decrease life
+6) beat the clock mode, life and time has problems
+Check commit
+git checkout [id]
+git checkout master branch
+
+
+Revert commit (Adding a new commit which undo the changes on a specific commit)
+git revert [id]
+press 'shift + :'
+keyin 'WQ'
+press 'enter'
+
+
+Reset commit-danger
+git reset [commit id] // Remove all the changes after that specific
+ 			commit but the changes still in editor
+git reset [commit id] -- hard //All the commit include that specific
+ 			commit is removed permanently
+
+git log --oneline
+
+
+Brances
+
+git branch [branch name]  //Create a branch
+git branch -a 		//Display all branches and current branches
+git checkout [branch nane] //Go into another branch
+git add .
+git status
+git commit -m 'any message'
+git branch -d [branch name]  //delete branch if merged
+git branch -D [branch name]  //delete a branch (Delete without merge)
+git checkout - b [new branch name]  //Checkout current branch, create
+				    create a new branch and go inside it
+
+
+Merging Branches
+git merge [branch name] //Merge a branch
+//If there is conflict, the changes will become comment
+//Need to edit manually on the master branch then commit again
+
+
+Collaborating
+git pull origin [branch name]
+git push origin [branch name]
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
