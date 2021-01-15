@@ -1,11 +1,3 @@
-
-
-1) if life <0, then game over.
-2) how to play is not correct, need to change to rules of the game
-3) in play mode, life number is not correct, when life becomes zero, it returns to two
-4) coin not sure about its function
-5) if miss, dont decrease life
-6) beat the clock mode, life and time has problems
 Check commit
 git checkout [id]
 git checkout master branch
@@ -16,7 +8,6 @@ git revert [id]
 press 'shift + :'
 keyin 'WQ'
 press 'enter'
-
 
 Reset commit-danger
 git reset [commit id] // Remove all the changes after that specific
@@ -51,5 +42,35 @@ Collaborating
 git pull origin [branch name]
 git push origin [branch name]
 
+ 
 
-//Hello this is branch A
+
+
+git branch [new branch name]
+git checkout [branch name]
+git add .
+git commit -m 'changes'
+git push origin [branch name]
+
+
+git pull origin [branch name]
+git merge [branch name]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
