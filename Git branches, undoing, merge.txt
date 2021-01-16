@@ -42,10 +42,7 @@ Collaborating
 git pull origin [branch name]
 git push origin [branch name]
 
- 
-
-
-
+Flow 
 git branch [new branch name]
 git checkout [branch name]
 git add .
@@ -53,6 +50,7 @@ git commit -m 'changes'
 git push origin [branch name]
 
 
+Before merge
 git pull origin [branch name]
 git merge [branch name]
 
