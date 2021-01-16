@@ -15,8 +15,7 @@ git reset [commit id] // Remove all the changes after that specific
 git reset [commit id] -- hard //All the commit include that specific
  			commit is removed permanently
 
-git log --oneline
-
+git log --oneline //Check version log
 
 Brances
 
