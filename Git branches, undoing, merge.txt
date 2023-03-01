@@ -46,6 +46,7 @@ git branch [new branch name]
 git checkout [branch name]
 git add .
 git commit -m 'changes'
+git push --set-upstream origin [branch name] // If first time add branch to remote
 git push origin [branch name]
 
 
