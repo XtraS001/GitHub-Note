@@ -34,7 +34,7 @@ $ git checkout <branch name>  //Checkout and log in to branch name
 $ git merge <branch name>     //Merge a branch
 
 #Follow steps when creating resipotary
-$ git remote add origin https://github.com/XtraS001/GitHub-Note.git
+$ git remote add origin https://github.com/XtraS001/GitHub-Note.git   //Import to connect with the remote(upload to github)
 $ git remote remove origin    //Remove wrong url/origin
 $ git push -u origin master
 
