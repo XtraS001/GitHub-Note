@@ -5,6 +5,8 @@ git status
 
 2. Create worktree for branch-A, Create the branch from main, and create a folder for it:
 > git worktree add -b branch-A ../branch-A main
+> git worktree add -b <branch_name> ../<directory_main> <parent_branch_name>
+
 
 Translate: create/add a worktree call branch-A at a folder call /branch-A. The branch is created from 'main' branch
 
