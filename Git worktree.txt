@@ -31,3 +31,6 @@ git push origin branch-A   # or branch-B
 > git worktree remove ../branch-A
 > git worktree remove ../branch-B
 
+Reminder:
+Reopen vscode to work in new worktree.
+Changing worktree in terminal doesn't bring you to another worktree
