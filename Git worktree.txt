@@ -1,0 +1,33 @@
+1. Make sure your main repo is clean
+> git status
+
+git status
+
+2. Create worktree for branch-A, Create the branch from main, and create a folder for it:
+> git worktree add -b branch-A ../branch-A main
+
+Translate: create/add a worktree call branch-A at a folder call /branch-A. The branch is created from 'main' branch
+
+3. Refer to 2.
+> git worktree add -b branch-B ../branch-B main
+
+4. Go to the directory
+> cd ../branch-B 
+
+
+5. Open branch-A in vs code
+> code ../branch-A
+> code ../branch-B
+
+
+
+5. Work normally in a worktree
+git add .
+git commit -m "<your message>"
+git push origin branch-A   # or branch-B
+
+
+6. Remove worktree when done (optional)
+> git worktree remove ../branch-A
+> git worktree remove ../branch-B
+
